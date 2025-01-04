@@ -7,7 +7,7 @@ const MySubscriptions = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    const url = "https://cloud-kitchen-6.onrender.com" // Backend URL
+    const url = "https://nuv0la-online-3.onrender.com" // Backend URL
 
     useEffect(() => {
         const fetchUserSubscriptions = async () => {
