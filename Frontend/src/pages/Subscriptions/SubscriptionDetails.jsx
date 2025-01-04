@@ -9,7 +9,7 @@ const PlanDetails = () => {
     const [plan, setPlan] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const url = "http://localhost:4000"; // Backend API URL
+    const url = "https://nuv0la-online-3.onrender.com"; // Backend API URL
 
     // State for user selection
     const [mealType, setMealType] = useState("breakfast");
