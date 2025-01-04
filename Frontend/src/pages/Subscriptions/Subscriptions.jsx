@@ -7,7 +7,7 @@ const Subscriptions = () => {
     const [plans, setPlans] = useState([]); // State to hold subscription plans
     const [loading, setLoading] = useState(true); // State for loading spinner
     const [error, setError] = useState(null); // State for error handling
-    const url = "http://localhost:4000";
+    const url = "https://nuv0la-online-3.onrender.com";
 
     // Fetch plans from the backend
     useEffect(() => {
