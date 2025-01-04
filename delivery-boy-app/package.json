@@ -2,7 +2,7 @@
   "name": "delivery-boy-app",
   "version": "1.0.0",
   "description": "A delivery boy tracking application",
-  "main": "index.js",
+  "main": "index.jsx",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
