@@ -11,7 +11,7 @@ const DeliveryBoyPage = () => {
   const [deliveryMarker, setDeliveryMarker] = useState(null);
   const [status, setStatus] = useState("Fetching location...");
   const [eta, setEta] = useState("Calculating...");
-  const backendUrl = "http://localhost:4000"; // Backend URL
+  const backendUrl = "https://nuv0la-online-3.onrender.com"; // Backend URL
   const deliverySpeedKmh = 50; // Delivery speed for ETA calculation
 
   // Fetch orders for the delivery boy
