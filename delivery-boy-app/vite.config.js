@@ -12,9 +12,6 @@ export default defineConfig({
       input: path.resolve(__dirname, 'public/index.html'),
     },
   },
-  server: {
-    port: 3000,
-  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
