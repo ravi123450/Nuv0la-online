@@ -16,7 +16,7 @@ console.log("JWT Secret Key:", jwtSecret); // Debug JWT_SECRET
 
 // app config
 const app = express();
-const port = 4000;
+const port = process.env.PORT || 4000;
 
 // middleware
 app.use(express.json());
