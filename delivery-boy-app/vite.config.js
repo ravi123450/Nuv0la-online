@@ -1,11 +1,15 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: "dist", // Ensure output is in 'dist'
-    assetsDir: "assets", // Place bundled files in 'assets'
+    outDir: "dist",'
+    assetsDir: "assets", 
+     rollupOptions: {
+      input: path.resolve(__dirname, 'public/index.html'),
+    },
   },
   server: {
     port: 3000,
