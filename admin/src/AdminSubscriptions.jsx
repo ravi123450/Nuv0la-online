@@ -9,7 +9,7 @@ const AdminSubscriptions = () => {
     const [selectedUser, setSelectedUser] = useState(null); // State for selected user details
     const [showModal, setShowModal] = useState(false); // State to toggle modal visibility
 
-    const url = "http://localhost:4000";
+    const url = "https://nuv0la-online-3.onrender.com";
 
     useEffect(() => {
         const fetchSubscriptions = async () => {
