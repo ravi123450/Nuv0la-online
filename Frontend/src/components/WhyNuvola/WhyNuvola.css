@@ -1,0 +1,110 @@
+.why-nuvola-container {
+    text-align: center;
+    background-color: #f9fafc; /* Light gray background */
+    padding: 3rem 2rem;
+    margin: 50px auto;
+}
+
+.why-nuvola-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+}
+
+/* Desktop View */
+.why-nuvola-cards.desktop-view {
+    display: flex;
+    justify-content: center; /* Center align */
+    align-items: flex-start;
+    gap: 2rem; /* Space between cards */
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.nuvola-card {
+    background-color: #e8f5e9; /* Light green background */
+    border-radius: 10px;
+    text-align: center;
+    padding: 2rem;
+    width: 240px; /* Fixed width for consistent sizing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nuvola-card:hover {
+    transform: translateY(-10px);
+}
+
+.nuvola-card img {
+    width: 60px;
+    margin-bottom: 1rem;
+}
+
+.nuvola-card h3 {
+    font-size: 1.2rem;
+    color: #28a745; /* Green */
+    margin-bottom: 1rem;
+}
+
+.nuvola-card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Mobile View */
+.why-nuvola-cards.mobile-view {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 20px 0;
+}
+
+.scroll-btn {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.scroll-btn.left {
+    left: -20px; /* Positioned outside the container */
+}
+
+.scroll-btn.right {
+    right: -20px; /* Positioned outside the container */
+}
+
+.scroll-btn:hover {
+    background-color: #218838;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.nuvola-card {
+    max-width: 90%;
+    margin: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .why-nuvola-cards.desktop-view {
+        display: none;
+    }
+
+    .why-nuvola-cards.mobile-view {
+        display: flex;
+    }
+
+    .nuvola-card {
+        width: 90%;
+    }
+}

@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Outfit;
+  scroll-behavior: smooth;
+}
+/* Global CSS (e.g., App.css or index.css) */
+body > * {
+  padding-top: 10px; /* Adjust based on your navbar height */
+  scroll-margin-top: 80px;
+}
+
+body{
+  min-height: 100vh;
+  background-color: #F4F4F4;
+
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.app{
+  width: 80%;
+  margin: auto;
+  padding-top: 200px;
+}
+
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}

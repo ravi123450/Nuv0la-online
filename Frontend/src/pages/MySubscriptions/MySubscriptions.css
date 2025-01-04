@@ -1,0 +1,87 @@
+.my-subscriptions {
+    padding: 40px 20px;
+    background-color: #f1f5f8; /* Softer background color for better contrast */
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+
+.my-subscriptions h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.subscription-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.subscription-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+}
+
+.subscription-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.subscription-card h3 {
+    font-size: 1.5rem;
+    color: #ff6347;
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.subscription-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.subscription-card p strong {
+    color: #333;
+}
+
+.subscription-card:last-child {
+    margin-bottom: 20px;
+}
+
+.loading,
+.error {
+    text-align: center;
+    color: #ff6347;
+    font-size: 1.3rem;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+/* Add responsive styling */
+@media (max-width: 768px) {
+    .subscription-card {
+        width: 90%; /* Adjust width for smaller devices */
+        padding: 20px;
+    }
+
+    .my-subscriptions h1 {
+        font-size: 2rem;
+    }
+
+    .subscription-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}

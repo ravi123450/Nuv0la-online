@@ -1,0 +1,94 @@
+.subscriptions-page {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f9fafc;
+    min-height: 100vh;
+}
+
+.subscriptions-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+.subscriptions-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.subscription-card {
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.subscription-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.subscription-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #34495e;
+}
+
+.subscription-card p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #7f8c8d;
+}
+
+.view-details-btn {
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+}
+
+.view-details-btn:hover {
+    background-color: #218838;
+}
+
+.loading-spinner {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin: 2rem 0;
+}
+
+.error-message {
+    font-size: 1.2rem;
+    color: #e74c3c;
+    margin: 2rem 0;
+}
+.stamp-logo {
+    position: absolute;
+    top: -15px; /* Adjust vertical position */
+    left: -15px; /* Adjust horizontal position */
+    width: 60px; /* Size of the logo */
+    height: 60px;
+    background-color: #fff; /* Optional: background to highlight logo */
+    border-radius: 50%; /* Circular logo */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensures the image stays within the circle */
+    border: 2px solid #ccc; /* Optional border for styling */
+}
+
+.stamp-logo img {
+    width: 80%; /* Scale the logo */
+    height: 80%;
+    object-fit: contain;
+}

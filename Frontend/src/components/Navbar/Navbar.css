@@ -1,0 +1,338 @@
+/* Navbar Styles */
+.navbar {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 1000;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    width: 130px;
+    transition: width 0.3s ease;
+}
+
+/* Desktop Menu */
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    color: #49557e;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.navbar-menu li {
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.navbar-menu li:hover {
+    color: tomato;
+}
+
+.navbar-menu .active {
+    border-bottom: 2px solid tomato;
+}
+
+/* Search Input */
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
+    width: 200px;
+    padding: 8px 35px 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+.search-container input:focus {
+    border-color: tomato;
+    background-color: #fff;
+}
+
+.search-container button {
+    position: absolute;
+    right: 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.search-container img {
+    width: 16px;
+    height: 16px;
+}
+
+/* Remove the line below the input field */
+.search-container input {
+    box-shadow: none; /* Remove any box shadow */
+}
+
+/* Suggestions Dropdown */
+.search-suggestions {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+}
+
+.search-container input:focus + .search-suggestions,
+.search-suggestions:hover {
+    display: block;
+}
+
+.search-suggestion {
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #49557e;
+}
+
+.search-suggestion:hover {
+    background-color: #f9f9f9;
+    color: tomato;
+}
+
+.no-suggestions {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #777;
+}
+
+/* Navbar Right Section */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-right img {
+    width: 18px;
+}
+
+.navbar-right button {
+    background-color: transparent;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid tomato;
+    padding: 8px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navbar-right button:hover {
+    background-color: #fff4f2;
+}
+
+/* Profile Dropdown */
+.navbar-profile {
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-profile-dropdown {
+    position: absolute;
+    display: none;
+    top: 100%;
+    right: 0;
+    z-index: 1;
+    background-color: #fff2ef;
+    padding: 12px 20px;
+    border-radius: 6px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    border: 1px solid tomato;
+}
+
+.navbar-profile:hover .nav-profile-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-profile-dropdown li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #49557e;
+    cursor: pointer;
+}
+
+.nav-profile-dropdown img {
+    width: 20px;
+}
+
+.nav-profile-dropdown li:hover {
+    color: tomato;
+}
+
+/* Responsive Design */
+
+/* Medium Screens */
+@media (max-width: 1050px) {
+    .navbar .logo {
+        width: 120px;
+    }
+
+    .navbar-menu {
+        gap: 15px;
+        font-size: 16px;
+    }
+
+    .navbar-right {
+        gap: 15px;
+    }
+
+    .navbar-right button {
+        padding: 7px 18px;
+        font-size: 14px;
+    }
+
+    .search-container input {
+        width: 150px;
+    }
+}
+
+/* Small Screens */
+@media (max-width: 900px) {
+    .navbar .logo {
+        width: 100px;
+    }
+
+    .navbar-menu {
+        display: none;
+    }
+
+    .navbar-right {
+        gap: 15px;
+    }
+
+    .navbar-right img {
+        width: 16px;
+    }
+
+    .navbar-right button {
+        padding: 6px 15px;
+        font-size: 14px;
+    }
+
+    .search-container input {
+        width: 120px;
+    }
+}
+
+/* Mobile Screens */
+@media (max-width: 750px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .navbar-right button {
+        font-size: 13px;
+    }
+
+    .search-container input {
+        width: 100px;
+    }
+
+    .navbar-menu-mobile {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.95);
+        z-index: 2000;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+        padding-top: 60px;
+        animation: slideDown 0.3s ease-in-out;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-menu-mobile a {
+        color: #49557e;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 500;
+        text-align: center;
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .navbar-menu-mobile a:hover {
+        color: tomato;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+    }
+
+    /* Hamburger Icon */
+    .navbar-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .navbar-toggle div {
+        width: 25px;
+        height: 3px;
+        background-color: #49557e;
+        transition: all 0.3s ease;
+        border-radius: 2px;
+    }
+
+    .navbar-menu-mobile .close-button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 28px;
+        color: #49557e;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .navbar-menu-mobile .close-button:hover {
+        color: tomato;
+    }
+
+    @keyframes slideDown {
+        from {
+            transform: translateY(-100%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+}

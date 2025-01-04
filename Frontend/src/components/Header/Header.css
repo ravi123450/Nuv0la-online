@@ -1,0 +1,89 @@
+.header {
+    height: 30vw; /* Slightly reduced height for better proportions */
+    margin-top: 0px; /* Reduced margin for better spacing */
+    background: url('/header_img.png') no-repeat center center; /* Ensures image centers */
+    background-size: cover; /* Makes the image cover the entire header area */
+    position: relative;
+    border-radius: 10px; /* Optional: Adds soft rounded corners for modern look */
+    overflow: hidden; /* Prevents content overflow */
+    box-shadow: 0px 4px 10px rgba(204, 180, 180, 0.1); /* Adds subtle shadow for depth */
+}
+
+.header-contents {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5vw;
+    max-width: 50%;
+    bottom: 8%; /* Adjusted to bring content slightly up */
+    left: 5vw;
+    animation: fadeIn 3s;
+    padding: 1vw; /* Padding ensures content doesn’t touch the edges */
+}
+
+.header-contents h2 {
+    font-weight: 600; /* Bolder for more emphasis */
+    color: white;
+    font-size: max(4vw, 20px); /* Slightly adjusted for consistency */
+    line-height: 1.2; /* Improved line spacing */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Adds better contrast for readability */
+}
+
+.header-contents p {
+    color: white;
+    font-size: 1.2vw; /* Made text slightly larger for clarity */
+    line-height: 1.6; /* Improved readability */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4); /* Adds subtle text shadow */
+}
+
+.header-contents button {
+    border: none;
+    color: #333;
+    font-weight: 600;
+    padding: 0.8vw 2vw; /* Adjusted padding for proportional size */
+    background-color: white;
+    font-size: max(1vw, 12px);
+    border-radius: 8px; /* Reduced radius for modern look */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.header-contents button:hover {
+    background-color: #ff7f50; /* Light tomato color for hover effect */
+    color: white;
+}
+
+@media (max-width: 1050px) {
+    .header {
+        height: 40vw; /* Slightly increase height for smaller screens */
+    }
+    .header-contents {
+        max-width: 60%;
+        bottom: 10%; /* Adjusted positioning */
+    }
+    .header-contents h2 {
+        font-size: max(3.5vw, 18px);
+    }
+}
+
+@media (max-width: 750px) {
+    .header {
+        height: 50vw; /* Increase height for mobile screens */
+        border-radius: 0; /* Remove rounded corners for full-width look */
+    }
+    .header-contents {
+        max-width: 65%;
+        left: 4vw;
+    }
+    .header-contents h2 {
+        font-size: 5vw;
+    }
+    .header-contents p {
+        display: none; /* Hide paragraph on smaller screens */
+    }
+    .header-contents button {
+        padding: 2.5vw 4.5vw;
+        font-size: 10px;
+    }
+}

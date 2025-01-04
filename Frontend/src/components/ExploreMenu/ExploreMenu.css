@@ -1,0 +1,157 @@
+/* General Styles */
+.explore-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    scroll-margin-top: 70px; /* Ensure content is below navbar */
+}
+
+.explore-menu h1 {
+    color: #262626;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.explore-menu-text {
+    max-width: 60%; /* Maintain readable width */
+    color: #505050; /* Subtle gray for better readability */
+    font-size: 1.1rem; /* Slightly larger font for visibility */
+    line-height: 1.8; /* Increased line spacing for clarity */
+    margin: 10px auto; /* Add balanced space above and below */
+    text-align: center; /* Center-align text for symmetry */
+    font-family: 'Roboto', sans-serif; /* Modern and clean font */
+    letter-spacing: 0.5px; /* Slight spacing between letters for readability */
+    font-weight: 400; /* Regular font weight for a clean look */
+}
+
+
+/* Desktop List Layout */
+.explore-menu-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 20px 0px;
+}
+
+.explore-menu-list-items {
+    position: relative;
+    background: #f8f8f8;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.explore-menu-list-items:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.menu-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 10px;
+    transition: 0.3s;
+}
+
+.card-logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-logo img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+/* Carousel Styles */
+.explore-menu-carousel {
+    display: none; /* Hidden on desktop by default */
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.carousel-button {
+    background-color: #262626;
+    border: none;
+    font-size: 1.8rem;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s, background-color 0.3s, opacity 0.3s;
+    opacity: 0.8;
+}
+
+.carousel-button:hover {
+    background-color: tomato;
+    transform: translateY(-50%) scale(1.1);
+    opacity: 1;
+}
+
+.carousel-button.prev {
+    left: -50px; /* Place outside of container */
+}
+
+.carousel-button.next {
+    right: -50px; /* Place outside of container */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .explore-menu-text {
+        max-width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .explore-menu-list {
+        display: none; /* Hide desktop grid on mobile */
+    }
+
+    .explore-menu-carousel {
+        display: flex; /* Show carousel on mobile */
+    }
+
+    .menu-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .card-logo {
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+    }
+}
