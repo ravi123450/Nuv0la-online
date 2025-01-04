@@ -15,7 +15,7 @@ const TrackOrder = () => {
 
   const fetchOrderData = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/api/order/list/");
+      const response = await axios.get("https://nuv0la-online-3.onrender.com/api/order/list/");
       const orders = response.data.data;
 
       // Filter for "Out for Delivery" status
